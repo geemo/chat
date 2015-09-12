@@ -1,0 +1,27 @@
+<div class="col-xs-9">
+    <div class="panel panel-default">
+        <div class="panel-heading">Chat</div>
+        <div class="panel-body">
+            <div class="list-group" style="height:550px;overflow:auto" auto-scroll-to-bottom>
+                <div class="list-group-item" ng-repeat="message in messages track by $index">
+                    <img src="imgs/header.jpg" class="img-rounded"/>
+                    {{message.creator}}: {{message.content}}
+                </div>
+            </div>
+            <textarea ng-controller="messageCreatorCtrl" enter-to-send="createMessage()" ng-model="messageContent" class="form-control" placeholder="Enter To Send"></textarea>
+        </div>
+    </div>
+</div>
+<div class="col-xs-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">users</div>
+        <div class="panel-body">
+            <div class="list-group" style="height:604px;overflow:auto" auto-scroll-to-bottom>
+                <div class="list-group-item" ng-repeat="user in users track by $index">
+                    <img src="imgs/header.jpg" class="img-rounded"/>
+                    {{user}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

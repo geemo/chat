@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="chatApp">
+<head>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <a href="#" class="navbar-brand">Chat</a>
+    <div style="position:fixed;right:0;padding:10px 15px;" ng-show="me">
+        <img src="imgs/header.jpg" class="img-rounded"/>
+        <span class="text-warning">{{me}} | <a style="color:#fff" href="" ng-click="logout()">Logout</a></span>
+    </div>
+</div>
+<div class="container-fluid" style="margin-top:100px">
+    <div class="row" ng-view></div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="components/angular/angular.min.js"></script>
+<script src="components/angular-route/angular-route.min.js"></script>
+<script src="chatApp.js"></script>
+</body>
+</html>
